@@ -7,12 +7,13 @@ BR2_HAVE_DOT_CONFIG=y
 #
 # Target options
 #
-BR2_ARCH_IS_64=y
+BR2_ARCH_HAS_MMU_OPTIONAL=y
 # BR2_arcle is not set
 # BR2_arceb is not set
-# BR2_arm is not set
+BR2_arm=y
 # BR2_armeb is not set
 # BR2_aarch64 is not set
+# BR2_aarch64_be is not set
 # BR2_bfin is not set
 # BR2_i386 is not set
 # BR2_microblazeel is not set
@@ -26,29 +27,48 @@ BR2_ARCH_IS_64=y
 # BR2_powerpc64 is not set
 # BR2_powerpc64le is not set
 # BR2_sh is not set
-# BR2_sh64 is not set
 # BR2_sparc is not set
-BR2_x86_64=y
+# BR2_x86_64 is not set
 # BR2_xtensa is not set
-BR2_ARCH="x86_64"
+BR2_ARCH="arm"
 BR2_ENDIAN="LITTLE"
-BR2_GCC_TARGET_ARCH="nocona"
+BR2_GCC_TARGET_ABI="aapcs-linux"
+BR2_GCC_TARGET_CPU="arm1176jzf-s"
+BR2_GCC_TARGET_FPU="vfp"
+BR2_GCC_TARGET_FLOAT_ABI="softfp"
+BR2_GCC_TARGET_MODE="arm"
 BR2_ARCH_HAS_ATOMICS=y
 BR2_BINFMT_SUPPORTS_SHARED=y
 BR2_BINFMT_ELF=y
-BR2_X86_CPU_HAS_MMX=y
-BR2_X86_CPU_HAS_SSE=y
-BR2_X86_CPU_HAS_SSE2=y
-BR2_X86_CPU_HAS_SSE3=y
-BR2_x86_nocona=y
-# BR2_x86_core2 is not set
-# BR2_x86_corei7 is not set
-# BR2_x86_atom is not set
-# BR2_x86_opteron is not set
-# BR2_x86_opteron_sse3 is not set
-# BR2_x86_barcelona is not set
-# BR2_x86_jaguar is not set
-
+BR2_ARM_CPU_HAS_VFPV2=y
+BR2_ARM_CPU_HAS_ARM=y
+BR2_ARM_CPU_HAS_THUMB=y
+BR2_ARM_CPU_ARMV6=y
+# BR2_arm920t is not set
+# BR2_arm922t is not set
+# BR2_arm926t is not set
+# BR2_arm1136j_s is not set
+# BR2_arm1136jf_s is not set
+# BR2_arm1176jz_s is not set
+BR2_arm1176jzf_s=y
+# BR2_cortex_a5 is not set
+# BR2_cortex_a7 is not set
+# BR2_cortex_a8 is not set
+# BR2_cortex_a9 is not set
+# BR2_cortex_a12 is not set
+# BR2_cortex_a15 is not set
+# BR2_cortex_m3 is not set
+# BR2_fa526 is not set
+# BR2_pj4 is not set
+# BR2_strongarm is not set
+# BR2_xscale is not set
+# BR2_iwmmxt is not set
+BR2_ARM_EABI=y
+# BR2_ARM_EABIHF is not set
+# BR2_ARM_SOFT_FLOAT is not set
+BR2_ARM_FPU_VFPV2=y
+BR2_ARM_INSTRUCTIONS_ARM=y
+# BR2_ARM_INSTRUCTIONS_THUMB is not set
 #
 # Build options
 #

@@ -1,0 +1,4 @@
+FROM rancher/dind:v0.5.0
+ENV DAPPER_RUN_ARGS --privileged
+WORKDIR /source
+
